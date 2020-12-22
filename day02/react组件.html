@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.staticfile.org/react/16.4.0/umd/react.development.js"></script>
+  <script src="https://cdn.staticfile.org/react-dom/16.4.0/umd/react-dom.development.js"></script>
+  <!-- 生产环境中不建议使用 -->
+  <script src="https://cdn.staticfile.org/babel-standalone/6.26.0/babel.min.js"></script>
+  <title>Document</title>
+</head>
+<body>
+  <div id="example"></div>
+  <script type="text/babel">
+  // 1.函数式创建组件
+  function MyComponent() {
+    console.log(this) // 此处的this 是undefined  babel编译开启了严格模式
+    return <h1>我是组件</h1>
+  }
+  ReactDOM.render(MyComponent(), document.getElementById('example'))
+  /**
+   * 渲染步骤
+   * 执行reactDom.render()
+   * react解析组件标签  定义函数   找到函数  编译  渲染标签
+  */
+    </script>
+</body>
+</html>
