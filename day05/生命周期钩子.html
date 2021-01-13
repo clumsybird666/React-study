@@ -14,6 +14,10 @@
   <div id="test"></div>
   <script type="text/babel">
   class Count extends React.Component{
+    constructor(){
+      super()
+      console.log('constructor')
+    }
     state = { count: 0 }
     add = () =>{
       const {count} = this.state
@@ -28,8 +32,18 @@
         </div>
       )
     }
+    // 派生 了解
+    static getDerivedStateFromProps(props, state){
+      console.log('getDerivedStateFromProps', props, state  );
+      return { count: props.count }
+    }
+    // 快照
+    getSnapshotBeforeUpdate(){
+      console.log('getSnapshotBeforeUpdate');
+      
+    }
   }
-  ReactDOM.render(<Count />, document.getElementById('test'))
+  ReactDOM.render(<Count count={190}/>, document.getElementById('test'))
   </script>
 </body>
 </html>
