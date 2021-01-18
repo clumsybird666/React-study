@@ -42,6 +42,10 @@
       console.log('getSnapshotBeforeUpdate');
       
     }
+    // 组件更新完毕
+    componentDidUpdate(){
+      console.log('componentDidUpdate');
+    }
   }
   ReactDOM.render(<Count count={190}/>, document.getElementById('test'))
   </script>
