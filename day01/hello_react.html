@@ -12,7 +12,15 @@
 <body>
   <div id="example"></div>
   <script type="text/babel">
-    ReactDOM.render(<h1>Hello, world!</h1>,document.getElementById('example'));
-    </script>
+  let message = 'hello react'
+  function btnClick(){
+    console.log('点击了');
+    message = 'hello world'
+  }
+  ReactDOM.render(<div>
+    <h1>{message}</h1>
+    <button onClick={btnClick}>改变文字</button>
+    </div>,document.getElementById('example'));
+  </script>
 </body>
 </html>
