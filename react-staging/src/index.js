@@ -1,13 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 // import App from './App'
-import Hello from './components/Hello/hello'
+import App from './组件通信案例/App'
+// import Hello from './components/Hello/hello'
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
+    <App />
     {/* <App /> */}
-    <Hello />
+    {/* <Hello /> */}
   </React.StrictMode>,
   document.getElementById('root')
 );

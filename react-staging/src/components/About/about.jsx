@@ -1,9 +1,13 @@
-import React, { Component } from 'react'
-class About extends Component{
-  render (h) {
-    return <div className="panel-body">
-    <h3>我是About的内容</h3>
-  </div>
+import React, { Component } from 'react';
+
+class about extends Component {
+  render() {
+    return (
+      <div>
+        
+      </div>
+    );
   }
 }
-export default About
+
+export default about;

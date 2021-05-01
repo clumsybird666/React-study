@@ -1,0 +1,8 @@
+.tab-control{
+  display: flex;
+  justify-content: space-around;
+}
+.active{
+  color: red;
+  border-bottom: 3px solid red;
+}
